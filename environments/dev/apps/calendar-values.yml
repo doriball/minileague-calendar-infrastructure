@@ -1,0 +1,13 @@
+service:
+  type: ClusterIP
+  port: 8082
+
+hostPort:
+  enabled: true
+  port: 18082
+
+mongodb:
+  secretName: mongodb-secret
+  uri: "mongodb-external-service"
+  port: 2717
+  dbName: "calendar_dev"
