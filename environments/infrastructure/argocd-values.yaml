@@ -1,0 +1,13 @@
+server:
+  containerPort: 8080
+  httpsContainerPort: 8083
+
+  service:
+    type: ClusterIP
+
+  ports:
+    containerPort: 8080
+    hostPort: 18080
+
+  extraArgs:
+    - --insecure
