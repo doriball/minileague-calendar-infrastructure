@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: admin-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/doriball/minileague-calendar-backend.git
+    targetRevision: HEAD
+    path: components/apps/admin # 1. 공통 템플릿 경로
+    helm:
+      valueFiles:
+        - ../../../environments/dev/apps/admin-values.yml # 2. 개발 전용 설정값
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev # 3. 개발용 네임스페이스로 격리 배포
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true # 네임스페이스가 없으면 자동 생성

@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bootstrap-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/doriball/minileague-calendar-backend.git
+    targetRevision: HEAD
+    path: bootstrap/dev  # 이 폴더 안의 모든 YAML 파일을 감시
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

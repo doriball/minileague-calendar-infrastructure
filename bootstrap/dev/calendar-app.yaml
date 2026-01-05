@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: calendar-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/doriball/minileague-calendar-backend.git
+    targetRevision: HEAD
+    path: components/apps/calendar
+    helm:
+      valueFiles:
+        - ../../../environments/dev/apps/calendar-values.yml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true # 네임스페이스가 없으면 자동 생성
