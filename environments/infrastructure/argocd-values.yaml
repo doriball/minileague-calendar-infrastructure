@@ -1,13 +1,9 @@
+# 첫 배포 이후 false 처리
+installCRDs: false
+
 server:
-  containerPort: 8080
-  httpsContainerPort: 8083
-
   service:
-    type: ClusterIP
-
-  ports:
-    containerPort: 8080
-    hostPort: 18080
+    type: NodePort
 
   extraArgs:
     - --insecure
