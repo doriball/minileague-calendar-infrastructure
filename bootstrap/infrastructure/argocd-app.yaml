@@ -1,23 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: admin-dev
+  name: argocd
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/doriball/minileague-calendar-backend.git
     targetRevision: HEAD
-    path: components/apps/admin
+    path: components/infra/argocd
     helm:
       valueFiles:
-        - ../../../environments/dev/apps/admin-values.yml
+        - ../../../environments/infrastructure/argocd-values.yml
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: argocd # 자기 자신이 설치된 네임스페이스
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true

@@ -20,4 +20,4 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
-      - CreateNamespace=true # 네임스페이스가 없으면 자동 생성
+      - CreateNamespace=true

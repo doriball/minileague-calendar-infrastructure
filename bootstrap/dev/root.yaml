@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/doriball/minileague-calendar-backend.git
     targetRevision: HEAD
-    path: bootstrap/dev  # 이 폴더 안의 모든 YAML 파일을 감시
+    path: bootstrap/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
