@@ -43,9 +43,6 @@ spec:
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
-              {{- if .Values.hostPort.enabled }}
-              hostPort: {{ .Values.hostPort.port }}
-              {{- end }}
               protocol: TCP
           env:
             - name: SPRING_PROFILE

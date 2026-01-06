@@ -2,10 +2,6 @@ service:
   type: ClusterIP
   port: 8083
 
-hostPort:
-  enabled: false
-  port: 18083
-
 mongodb:
   secretName: mongodb-secret
   uri: "mongodb-external-service"

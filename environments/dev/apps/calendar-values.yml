@@ -1,10 +1,7 @@
 service:
-  type: ClusterIP
+  type: NodePort
   port: 8082
-
-hostPort:
-  enabled: true
-  port: 18082
+  nodePort: 30082
 
 mongodb:
   secretName: mongodb-secret
