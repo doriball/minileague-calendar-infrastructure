@@ -4,9 +4,9 @@ metadata:
   name: admin-dev
   namespace: argocd
 spec:
-  project: default
+  project: minileague-calendar
   source:
-    repoURL: https://github.com/doriball/minileague-calendar-backend.git
+    repoURL: https://github.com/doriball/minileague-calendar-infrastructure.git
     targetRevision: HEAD
     path: components/apps/admin
     helm:
