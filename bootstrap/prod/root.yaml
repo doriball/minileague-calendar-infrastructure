@@ -4,9 +4,9 @@ metadata:
   name: bootstrap-prod
   namespace: argocd
 spec:
-  project: minileague-calendar
+  project: default
   source:
-    repoURL: https://github.com/doriball/minileague-calendar-infrastructure.git
+    repoURL: git@github.com:doriball/minileague-calendar-infrastructure.git
     targetRevision: HEAD
     path: bootstrap/prod
   destination:
