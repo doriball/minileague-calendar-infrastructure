@@ -1,9 +1,7 @@
-# 첫 배포 이후 false 처리
-installCRDs: false
+argo-cd:
+  server:
+    service:
+      type: NodePort
 
-server:
-  service:
-    type: NodePort
-
-  extraArgs:
-    - --insecure
+    extraArgs:
+      - --insecure
