@@ -1,0 +1,4 @@
+name: external-mongodb
+
+port: 2717
+ip: 192.168.45.108
