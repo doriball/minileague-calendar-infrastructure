@@ -11,7 +11,7 @@ spec:
     path: components/infra/argocd
     helm:
       valueFiles:
-        - ../../../environments/infrastructure/argocd-values.yaml
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd # 자기 자신이 설치된 네임스페이스
