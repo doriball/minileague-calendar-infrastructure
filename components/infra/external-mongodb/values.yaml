@@ -1,4 +1,4 @@
-name: external-mongodb
+name: mongodb-external-service
 namespace: default
 
 port: 2717

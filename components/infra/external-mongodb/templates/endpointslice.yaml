@@ -1,0 +1,15 @@
+apiVersion: discovery.k8s.io/v1
+kind: EndpointSlice
+metadata:
+  name: {{ .Values.name }}-slice
+  namespace: {{ .Release.Namespace }}
+  labels:
+    kubernetes.io/service-name: {{ .Values.name }}
+addressType: IPv4
+ports:
+  - name: mongo
+    protocol: TCP
+    port: {{ .Values.port }}
+endpoints:
+  - addresses:
+      - {{ .Values.ip }}
