@@ -8,6 +8,6 @@ service:
 
 mongodb:
   secretName: mongodb-secret
-  uri: "mongodb-external-service"
+  uri: "mongodb-external-service.default.svc.cluster.local"
   port: 2717
   dbName: "calendar_dev"
