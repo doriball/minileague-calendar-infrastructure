@@ -1,0 +1,24 @@
+name: batch
+
+image:
+  repository: mrcocoball/minileague-calendar-batch
+  # This sets the pull policy for images.
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+springProfile: local
+
+mongodb:
+  secretName: mongodb-secret
+  uri: ''
+  port: 0
+  dbName: ''
+
+schedule: "0 0 * * *"
+
+concurrencyPolicy: "Forbid"
+
+successfulJobsHistoryLimit: 3
+
+failedJobsHistoryLimit: 1

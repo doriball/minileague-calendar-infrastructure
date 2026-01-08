@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ .Values.name }}
+spec:
+  schedule: "{{ .Values.schedule }}"
+  concurrencyPolicy: "{{ .Values.concurrencyPolicy }}"
+  successfulJobsHistoryLimit: {{ .Values.successfulJobsHistoryLimit }}
+  failedJobsHistoryLimit: {{ .Values.failedJobsHistoryLimit }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: {{ .Chart.Name }}
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              env:
+              - name: SPRING_PROFILE
+                value: {{ .Values.springProfile }}
+              - name: MONGO_USERNAME
+                valueFrom:
+                  secretKeyRef:
+                    name: {{ .Values.mongodb.secretName }}
+                    key: MONGO_USERNAME
+              - name: MONGO_PASSWORD
+                valueFrom:
+                  secretKeyRef:
+                    name: {{ .Values.mongodb.secretName }}
+                    key: MONGO_PASSWORD
+              - name: MONGO_URI
+                value: {{ .Values.mongodb.uri }}
+              - name: MONGO_PORT
+                value: {{ .Values.mongodb.port | quote }}
+              - name: MONGO_DB
+                value: {{ .Values.mongodb.dbName }}
