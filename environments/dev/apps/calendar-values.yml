@@ -1,13 +1,10 @@
 image:
-  tag: "dev-0.3"
-
+  tag: ""
 service:
   type: NodePort
   port: 8082
   nodePort: 30082
-
 springProfile: dev
-
 mongodb:
   secretName: mongodb-secret
   uri: "mongodb-external-service.default.svc.cluster.local"
