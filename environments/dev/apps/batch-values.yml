@@ -1,8 +1,6 @@
 image:
-  tag: "dev-0.3"
-
+  tag: "dev-0.04"
 springProfile: dev
-
 mongodb:
   secretName: mongodb-secret
   uri: "mongodb-external-service.default.svc.cluster.local"
