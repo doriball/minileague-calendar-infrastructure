@@ -1,18 +1,14 @@
 image:
-  tag: "dev-0.3"
-
+  tag: "dev-0.04"
 service:
   type: NodePort
   port: 8083
   nodePort: 30083
-
 springProfile: dev
-
 mongodb:
   secretName: mongodb-secret
   uri: "mongodb-external-service.default.svc.cluster.local"
   port: 2717
   dbName: "calendar_dev"
-
 admin:
   secretName: admin-secret
