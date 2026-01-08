@@ -2,8 +2,13 @@ service:
   type: ClusterIP
   port: 8083
 
+springProfile: prod
+
 mongodb:
   secretName: mongodb-secret
   uri: "mongodb-external-service"
   port: 2717
   dbName: "calendar_prod"
+
+admin:
+  secretName: admin-secret

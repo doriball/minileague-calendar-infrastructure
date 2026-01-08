@@ -1,10 +1,12 @@
 image:
-  tag: "dev-0.2"
+  tag: "dev-0.3"
 
 service:
   type: NodePort
   port: 8083
   nodePort: 30083
+
+springProfile: dev
 
 mongodb:
   secretName: mongodb-secret

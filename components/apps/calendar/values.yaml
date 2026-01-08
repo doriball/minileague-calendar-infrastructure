@@ -160,6 +160,8 @@ tolerations: []
 
 affinity: {}
 
+springProfile: local
+
 mongodb:
   secretName: mongodb-secret
   uri: ''
