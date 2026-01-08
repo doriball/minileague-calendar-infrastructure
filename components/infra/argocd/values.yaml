@@ -1,3 +1,7 @@
+configs:
+  cm:
+    timeout.reconciliation: 600s
+
 argo-cd:
   server:
     service:
