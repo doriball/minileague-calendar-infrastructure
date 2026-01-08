@@ -5,3 +5,12 @@ argo-cd:
 
     extraArgs:
       - --insecure
+
+repoServer:
+  replicaCount:
+  extraArgs:
+    - --git-timeout=30
+controller:
+  extraArgs:
+    - --operation-processors=1
+    - --app-operations-processors=1
