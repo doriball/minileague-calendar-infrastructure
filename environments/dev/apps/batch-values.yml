@@ -6,3 +6,8 @@ mongodb:
   uri: "mongodb-external-service.default.svc.cluster.local"
   port: 2717
   dbName: "calendar_dev"
+
+doriball:
+  management:
+    windowDays: 30
+    chunkSize: 100

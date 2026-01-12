@@ -22,3 +22,8 @@ concurrencyPolicy: "Forbid"
 successfulJobsHistoryLimit: 3
 
 failedJobsHistoryLimit: 1
+
+doriball:
+  management:
+    windowDays: 7
+    chunkSize: 100

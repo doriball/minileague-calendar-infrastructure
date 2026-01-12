@@ -35,3 +35,7 @@ spec:
                 value: {{ .Values.mongodb.port | quote }}
               - name: MONGO_DB
                 value: {{ .Values.mongodb.dbName }}
+              - name: WINDOW_DAYS
+                value: {{ .Values.doriball.management.windowDays | quote }}
+              - name: CHUNK_SIZE
+                value: {{ .Values.doriball.management.chunkSize | quote }}
