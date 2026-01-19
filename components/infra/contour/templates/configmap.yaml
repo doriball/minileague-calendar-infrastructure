@@ -8,4 +8,4 @@ data:
     gateway:
       gatewayRef:
         name: contour
-        namespace: contour
+        namespace: projectcontour
