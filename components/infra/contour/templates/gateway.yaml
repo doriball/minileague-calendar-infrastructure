@@ -2,7 +2,7 @@ apiVersion: gateway.networking.k8s.io/v1beta1
 kind: Gateway
 metadata:
   name: contour-gateway
-  namespace: project-contour
+  namespace: contour
 spec:
   gatewayClassName: contour-class
   listeners:
