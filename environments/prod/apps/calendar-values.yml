@@ -1,9 +1,9 @@
+image:
+  tag: "dev-0.19"
 service:
   type: ClusterIP
   port: 8082
-
 springProfile: prod
-
 mongodb:
   secretName: mongodb-secret
   uri: "mongodb-external-service"

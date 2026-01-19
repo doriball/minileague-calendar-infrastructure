@@ -1,0 +1,12 @@
+image:
+  tag: "dev-0.08"
+springProfile: prod
+mongodb:
+  secretName: mongodb-secret
+  uri: "mongodb-external-service.default.svc.cluster.local"
+  port: 2717
+  dbName: "calendar_prod"
+doriball:
+  management:
+    windowDays: 30
+    chunkSize: 100
