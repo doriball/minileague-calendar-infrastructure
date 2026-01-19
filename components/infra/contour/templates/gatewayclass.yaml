@@ -1,6 +1,12 @@
-apiVersion: gateway.networking.k8s.io/v1
 kind: GatewayClass
+apiVersion: gateway.networking.k8s.io/v1
 metadata:
-  name: contour-class
+  name: contour-with-envoy-deployment
 spec:
-  controllerName: projectcontour.io/contour
+  controllerName: projectcontour.io/gateway-controller
+  parametersRef:
+    kind: ContourDeployment
+    group: projectcontour.io
+    name: contour-with-envoy-deployment-params
+    namespace: contour
+

@@ -4,7 +4,7 @@ metadata:
   name: contour-gateway
   namespace: contour
 spec:
-  gatewayClassName: contour-class
+  gatewayClassName: contour-with-envoy-deployment
   listeners:
     - name: http
       protocol: HTTP
