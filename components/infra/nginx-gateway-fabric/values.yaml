@@ -1,7 +1,0 @@
-service:
-  type: NodePort
-  ports:
-    http:
-      nodePort: 31080
-    https:
-      nodePort: 31443
