@@ -4,5 +4,5 @@ version: 0.1.0
 
 dependencies:
   - name: contour
-    version: "21.1.4"
-    repository: file://charts/contour
+    version: "0.2.1"
+    repository: https://projectcontour.github.io/helm-charts/contour/
