@@ -8,5 +8,5 @@ mongodb:
   dbName: "calendar_prod"
 doriball:
   management:
-    windowDays: 30
+    windowDays: 14
     chunkSize: 100
