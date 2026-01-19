@@ -13,6 +13,8 @@ rules:
       - events
       - configmaps
       - serviceaccounts
+      - persistentvolumeclaims
+      - persistentvolumes
     verbs: ["get", "list", "watch"]
 
   - apiGroups: [""]
@@ -33,6 +35,15 @@ rules:
       - jobs
       - cronjobs
     verbs: ["get", "list", "watch"]
+
+  - apiGroups: [ "storage.k8s.io" ]
+    resources:
+      - storageclasses
+      - volumeattachments
+      - csidrivers
+      - csinodes
+      - csistoragecapacities
+    verbs: [ "get", "list", "watch" ]
 
   - apiGroups: ["networking.k8s.io"]
     resources:
