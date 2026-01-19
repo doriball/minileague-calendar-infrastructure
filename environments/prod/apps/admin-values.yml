@@ -3,6 +3,19 @@ image:
 service:
   type: ClusterIP
   port: 8083
+httpRoute:
+  enabled: true
+  hostnames:
+    - "admin.doriball.com"
+  parentRefs:
+    - name: contour-gateway
+      namespace: projectcontour
+  rules:
+    - matches:
+        - path:
+            type: Prefix
+            value: /
+      filters: []
 springProfile: prod
 mongodb:
   secretName: mongodb-secret
