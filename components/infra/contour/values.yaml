@@ -1,7 +1,14 @@
 contour:
+  configInline:
+    gateway:
+      gatewayRef:
+        name: contour
+        namespace: projectcontour
   envoy:
     service:
       type: NodePort
       nodePorts:
         http: 31080
         https: 31443
+  gatewayAPI:
+    manageCRDs: ture
