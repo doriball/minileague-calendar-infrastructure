@@ -4,8 +4,3 @@ envoy:
     nodePorts:
       http: 31080
       https: 31443
-
-contour:
-  image:
-    repository: projectcontour/contour
-    tag: v1.33.1
