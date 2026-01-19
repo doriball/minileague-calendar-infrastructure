@@ -10,3 +10,6 @@ headlamp:
 
   ingress:
     enabled: false
+
+  rbac:
+    create: false
