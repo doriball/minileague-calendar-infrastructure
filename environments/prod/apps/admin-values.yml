@@ -13,7 +13,7 @@ httpRoute:
   rules:
     - matches:
         - path:
-            type: Prefix
+            type: PathPrefix
             value: /
       filters: []
 springProfile: prod
