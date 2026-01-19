@@ -6,22 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://kubernetes-sigs.github.io/headlamp/
-    chart: headlamp
-    targetRevision: "0.39.0"
-    helm:
-      values: |
-        service:
-          type: NodePort
-          port: 80
-          nodePort: 32080
-        ingress:
-          enabled: false
-
+    repoURL: git@github.com:doriball/minileague-calendar-infrastructure.git
+    targetRevision: main
+    path: components/infra/headlamp
   destination:
     server: https://kubernetes.default.svc
     namespace: headlamp-system
-
   syncPolicy:
     automated:
       prune: true
