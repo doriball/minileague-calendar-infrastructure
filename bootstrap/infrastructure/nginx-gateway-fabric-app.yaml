@@ -10,12 +10,9 @@ spec:
     chart: nginx-gateway-fabric
     targetRevision: "2.3.0"
     helm:
-      valueFiles:
-        - $values/components/infra/nginx-gateway-fabric/values.yaml
-  sources:
-    - repoURL: git@github.com:doriball/minileague-calendar-infrastructure.git
-      targetRevision: main
-      ref: values
+      parameters:
+        - name: service.type
+          value: NodePort
   destination:
     server: https://kubernetes.default.svc
     namespace: nginx-gateway
