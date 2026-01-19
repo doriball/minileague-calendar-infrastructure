@@ -1,5 +1,5 @@
 image:
-  tag: "dev-0.19"
+  tag: "prod-v0.01"
 service:
   type: ClusterIP
   port: 8082
