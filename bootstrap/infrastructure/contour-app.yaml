@@ -11,7 +11,7 @@ spec:
     path: components/infra/contour
   destination:
     server: https://kubernetes.default.svc
-    namespace: contour
+    namespace: projectcontour
   syncPolicy:
     automated:
       prune: true
