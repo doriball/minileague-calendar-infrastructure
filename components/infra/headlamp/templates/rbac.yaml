@@ -12,6 +12,7 @@ rules:
       - nodes
       - events
       - configmaps
+      - serviceaccounts
     verbs: ["get", "list", "watch"]
 
   - apiGroups: [""]
