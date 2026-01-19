@@ -1,21 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cert-manager
+  name: headlamp
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://charts.jetstack.io
-    chart: cert-manager
-    targetRevision: v1.19.2
+    repoURL: https://kubernetes-sigs.github.io/headlamp/
+    chart: headlamp
+    targetRevision: "0.39.0"
     helm:
       values: |
-        installCRDs: true
+        service:
+          type: NodePort
+          port: 80
+          nodePort: 33080
+        ingress:
+          enabled: false
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: cert-manager
+    namespace: headlamp-system
 
   syncPolicy:
     automated:
