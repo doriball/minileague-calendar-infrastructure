@@ -1,8 +1,0 @@
-kind: ContourDeployment
-apiVersion: projectcontour.io/v1alpha1
-metadata:
-  namespace: contour
-  name: contour-with-envoy-deployment-params
-spec:
-  envoy:
-    workloadType: Deployment
