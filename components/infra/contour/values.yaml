@@ -10,5 +10,3 @@ contour:
       nodePorts:
         http: 31080
         https: 31443
-  gatewayAPI:
-    manageCRDs: ture
