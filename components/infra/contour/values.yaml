@@ -1,0 +1,6 @@
+envoy:
+  service:
+    type: NodePort
+    nodePorts:
+      http: 31080
+      https: 31443
