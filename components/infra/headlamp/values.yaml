@@ -11,5 +11,5 @@ headlamp:
   ingress:
     enabled: false
 
-  rbac:
+  clusterRoleBinding:
     create: false
