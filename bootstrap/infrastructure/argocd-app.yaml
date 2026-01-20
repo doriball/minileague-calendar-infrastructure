@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: git@github.com:doriball/minileague-calendar-infrastructure.git
-    targetRevision: HEAD
+    targetRevision: main
     path: components/infra/argocd
     helm:
       valueFiles:

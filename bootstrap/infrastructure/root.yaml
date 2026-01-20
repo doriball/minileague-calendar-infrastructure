@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: git@github.com:doriball/minileague-calendar-infrastructure.git
-    targetRevision: HEAD
+    targetRevision: main
     path: bootstrap/infrastructure # 공통 인프라 설정 폴더 감시
   destination:
     server: https://kubernetes.default.svc
