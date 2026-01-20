@@ -1,22 +1,22 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: argocd
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: git@github.com:doriball/minileague-calendar-infrastructure.git
-    targetRevision: main
-    path: components/infra/argocd
-    helm:
-      valueFiles:
-        - values.yaml
-      skipCrds: true
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: argocd # 자기 자신이 설치된 네임스페이스
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+#apiVersion: argoproj.io/v1alpha1
+#kind: Application
+#metadata:
+#  name: argocd
+#  namespace: argocd
+#spec:
+#  project: default
+#  source:
+#    repoURL: git@github.com:doriball/minileague-calendar-infrastructure.git
+#    targetRevision: main
+#    path: components/infra/argocd
+#    helm:
+#      valueFiles:
+#        - values.yaml
+#      skipCrds: true
+#  destination:
+#    server: https://kubernetes.default.svc
+#    namespace: argocd # 자기 자신이 설치된 네임스페이스
+#  syncPolicy:
+#    automated:
+#      prune: true
+#      selfHeal: true
