@@ -1,6 +1,9 @@
 configs:
   cm:
     timeout.reconciliation: 600s
+  params:
+    reposerver.git.request.timeout: 30s
+    reposerver.parallelism.limit: 1
 
 argo-cd:
   server:
@@ -12,9 +15,6 @@ argo-cd:
 
 repoServer:
   replicaCount:
-  extraArgs:
-    - --parallelismlimit=1
-    - --git-timeout=30
   resources:
     requests:
       cpu: 200m
