@@ -1,5 +1,5 @@
 image:
-  tag: "prod-v0.01"
+  tag: "prod-v0.02"
 service:
   type: ClusterIP
   port: 8083
