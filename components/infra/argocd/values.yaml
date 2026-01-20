@@ -13,6 +13,7 @@ argo-cd:
 repoServer:
   replicaCount:
   extraArgs:
+    - --parallelismlimit=1
     - --git-timeout=30
   resources:
     requests:
@@ -22,8 +23,9 @@ repoServer:
       cpu: 1000m
       memory: 1Gi
   livenessProbe:
-    timeoutSeconds: 5
-    failureThreshold: 5
+    timeoutSeconds: 15
+    periodSeconds: 60
+    failureThreshold: 6
 controller:
   extraArgs:
     - --operation-processors=1
