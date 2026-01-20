@@ -14,6 +14,13 @@ repoServer:
   replicaCount:
   extraArgs:
     - --git-timeout=30
+  resources:
+    requests:
+      cpu: 200m
+      memory: 512Mi
+    limits:
+      cpu: 1000m
+      memory: 1Gi
 controller:
   extraArgs:
     - --operation-processors=1
