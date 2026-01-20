@@ -26,3 +26,6 @@ argo-cd:
       timeoutSeconds: 15
       periodSeconds: 60
       failureThreshold: 6
+  controller:
+    extraArgs:
+      - --operation-processors=1
