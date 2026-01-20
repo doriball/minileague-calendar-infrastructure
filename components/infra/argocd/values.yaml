@@ -1,11 +1,11 @@
-configs:
-  cm:
-    timeout.reconciliation: 600s
-  params:
-    reposerver.git.request.timeout: 30s
-    reposerver.parallelism.limit: 1
-
 argo-cd:
+  configs:
+    cm:
+      timeout.reconciliation: 600s
+    params:
+      reposerver.git.request.timeout: 30s
+      reposerver.parallelism.limit: 1
+
   server:
     service:
       type: NodePort
@@ -13,20 +13,20 @@ argo-cd:
     extraArgs:
       - --insecure
 
-repoServer:
-  replicaCount:
-  resources:
-    requests:
-      cpu: 200m
-      memory: 512Mi
-    limits:
-      cpu: 1000m
-      memory: 1Gi
-  livenessProbe:
-    timeoutSeconds: 15
-    periodSeconds: 60
-    failureThreshold: 6
-controller:
-  extraArgs:
-    - --operation-processors=1
-    - --app-operations-processors=1
+  repoServer:
+    replicaCount:
+    resources:
+      requests:
+        cpu: 200m
+        memory: 512Mi
+      limits:
+        cpu: 1000m
+        memory: 1Gi
+    livenessProbe:
+      timeoutSeconds: 15
+      periodSeconds: 60
+      failureThreshold: 6
+  controller:
+    extraArgs:
+      - --operation-processors=1
+      - --app-operations-processors=1
