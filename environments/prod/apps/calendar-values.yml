@@ -15,7 +15,12 @@ httpRoute:
         - path:
             type: PathPrefix
             value: /
-      filters: []
+      filters:
+        - type: RequestHeaderModifier
+          requestHeaderModifier:
+            set:
+              - name: X-Forwarded-Proto
+                value: https
 springProfile: prod
 mongodb:
   secretName: mongodb-secret
