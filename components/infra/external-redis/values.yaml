@@ -1,0 +1,5 @@
+name: mongodb-external-service
+namespace: default
+
+port: 6262
+ip: 192.168.45.108
