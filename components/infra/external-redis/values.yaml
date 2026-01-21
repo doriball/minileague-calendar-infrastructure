@@ -1,4 +1,4 @@
-name: mongodb-external-service
+name: redis-external-service
 namespace: default
 
 port: 6262
