@@ -15,6 +15,3 @@ headlamp:
   serviceAccount:
     create: false
     name: headlamp-viewer
-
-  config:
-    insecure: true
