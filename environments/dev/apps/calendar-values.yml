@@ -10,3 +10,8 @@ mongodb:
   uri: "mongodb-external-service.default.svc.cluster.local"
   port: 2717
   dbName: "calendar_dev"
+redis:
+  secretName: redis-secret
+  host: "redis-external-service.default.svc.cluster.local"
+  port: 6262
+  db: 0
