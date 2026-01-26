@@ -2,4 +2,4 @@ name: redis-external-service
 namespace: default
 
 port: 6262
-ip: 192.168.45.108
+ip: 192.168.45.150
