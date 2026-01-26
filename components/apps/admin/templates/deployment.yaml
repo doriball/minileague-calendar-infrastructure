@@ -63,6 +63,17 @@ spec:
               value: {{ .Values.mongodb.port | quote }}
             - name: MONGO_DB
               value: {{ .Values.mongodb.dbName }}
+            - name: REDIS_URI
+              value: { { .Values.redis.host } }
+            - name: REDIS_PORT
+              value: { { .Values.redis.port | quote } }
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: { { .Values.redis.secretName } }
+                  key: REDIS_PASSWORD
+            - name: REDIS_DB
+              value: { { .Values.redis.db | quote } }
             - name: ADMIN_USERNAME
               valueFrom:
                 secretKeyRef:

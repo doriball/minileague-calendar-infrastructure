@@ -172,5 +172,12 @@ mongodb:
   port: 0
   dbName: ''
 
+redis:
+  secretName: redis-secret
+  host: ''
+  port: 0
+  password: ''
+  db: ''
+
 admin:
   secretName: admin-secret
