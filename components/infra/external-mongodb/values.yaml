@@ -2,4 +2,4 @@ name: mongodb-external-service
 namespace: default
 
 port: 2717
-ip: 192.168.45.108
+ip: 192.168.45.150
