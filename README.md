@@ -1,1 +1,2 @@
-# minileague-calander-infrastructure
+# minileague-calendar-infrastructure
+
