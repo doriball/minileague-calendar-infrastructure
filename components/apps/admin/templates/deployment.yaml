@@ -84,6 +84,11 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.admin.secretName }}
                   key: ADMIN_PASSWORD
+            - name: WEBHOOK_URL
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.slack.secretName }}
+                  key: WEBHOOK_URL
           {{- with .Values.livenessProbe }}
           livenessProbe:
             {{- toYaml . | nindent 12 }}

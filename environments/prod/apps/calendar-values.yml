@@ -32,3 +32,5 @@ redis:
   host: "redis-external-service.default.svc.cluster.local"
   port: 6262
   db: 1
+slack:
+  secretName: slack-secret

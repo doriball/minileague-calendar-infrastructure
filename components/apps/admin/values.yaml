@@ -179,5 +179,8 @@ redis:
   password: ''
   db: ''
 
+slack:
+  secretName: slack-secret
+
 admin:
   secretName: admin-secret

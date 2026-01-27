@@ -178,3 +178,6 @@ redis:
   port: 0
   password: ''
   db: ''
+
+slack:
+  secretName: slack-secret
