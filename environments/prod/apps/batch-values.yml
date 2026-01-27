@@ -1,5 +1,5 @@
 image:
-  tag: "prod-v0.04"
+  tag: "prod-v0.05"
 springProfile: prod
 mongodb:
   secretName: mongodb-secret
