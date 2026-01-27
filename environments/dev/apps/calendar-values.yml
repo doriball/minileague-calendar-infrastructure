@@ -1,5 +1,5 @@
 image:
-  tag: "dev-0.26"
+  tag: "dev-0.27"
 service:
   type: NodePort
   port: 8082
