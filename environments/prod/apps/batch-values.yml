@@ -6,6 +6,11 @@ mongodb:
   uri: "mongodb-external-service.default.svc.cluster.local"
   port: 2717
   dbName: "calendar_prod"
+redis:
+  secretName: redis-secret
+  host: "redis-external-service.default.svc.cluster.local"
+  port: 6262
+  db: 1
 doriball:
   management:
     windowDays: 14
