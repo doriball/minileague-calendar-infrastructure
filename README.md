@@ -1,5 +1,8 @@
 # PokecaGO GitOps Repository
 
+### 인프라 아키텍처
+![architecture.png](architecture.png)
+
 ### 기술 스택
 - Backend
     - Kotlin
