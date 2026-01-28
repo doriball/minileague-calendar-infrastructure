@@ -22,6 +22,9 @@ redis:
   password: ''
   db: ''
 
+slack:
+  secretName: slack-secret
+
 schedule: "0 0 * * *"
 
 concurrencyPolicy: "Forbid"
